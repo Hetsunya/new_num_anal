@@ -78,11 +78,6 @@ print(df)
 # строка с подстановкой
 print(f"\nПроверка: f1({x1_r}, {x2_r}) = {f1_r}, f2({x1_r}, {x2_r}) = {f2_r}")
 
-
-
-
-
-
 import matplotlib.pyplot as plt
 import numpy as np
 
