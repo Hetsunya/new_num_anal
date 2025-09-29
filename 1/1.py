@@ -77,3 +77,28 @@ print(df)
 
 # строка с подстановкой
 print(f"\nПроверка: f1({x1_r}, {x2_r}) = {f1_r}, f2({x1_r}, {x2_r}) = {f2_r}")
+
+
+
+
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+x1_vals = np.linspace(-5, 5, 400)
+x2_vals = np.linspace(-5, 5, 400)
+X1, X2 = np.meshgrid(x1_vals, x2_vals)
+F1 = np.sinh(X1 + 0.2*X2 + np.tan(0.1*X1*X2)) - 0.8
+F2 = np.sinh(0.6*X1 - 0.1*X2 + np.tan(0.2*X1*X2)) - 0.1
+
+plt.figure(figsize=(6,6))
+plt.contour(X1, X2, F1, levels=[0], colors='r', linewidths=2)
+plt.contour(X1, X2, F2, levels=[0], colors='b', linewidths=2)
+plt.plot(sol[0], sol[1], 'go', label='Решение')
+plt.xlabel('x1')
+plt.ylabel('x2')
+plt.legend()
+plt.title('Графическое отображение корня системы')
+plt.grid(True)
+plt.show()

@@ -50,11 +50,6 @@ print(f"Функционал Phi(x*) = {Phi_val:.6e}")
 print(f"Градиент grad Phi(x*) = [{grad_Phi(solution)[0]:.6e}, {grad_Phi(solution)[1]:.6e}]")
 print(f"Норма остатка ||F(x*)|| = {norm_F:.6e}")
 print("-"*50)
-if norm_F < 1e-6:
-    print("Система удовлетворена с требуемой точностью.")
-else:
-    print("Остаток ещё заметен, можно уменьшить eps или шаг alpha.")
-print("="*50)
 
 # --- Таблица результатов ---
 prec = 6
